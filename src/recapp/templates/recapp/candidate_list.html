@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for instance in object_list %}
+<p>{{ instance.id }}: {{ instance.first_name }} {{ instance.last_name }}</p>
+{% endfor %}
+<p><a href="./add-mark/">add-mark</a></p>
+{% endblock %}
