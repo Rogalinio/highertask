@@ -9,8 +9,8 @@ class Candidate(models.Model):
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name
-    # def get_absolute_url(self):
-    #     return reverse("articles:article-detail", kwargs={"id": self.id})
+
+
 
 
 class Recruter(models.Model):
@@ -36,8 +36,7 @@ class Grade(models.Model):
     # def __str__(self):
     #     return self.task
 
-    def get_absolute_url(self):
-        return reverse("recapp:recap_add-mark", kwargs={"id": self.id})
+
 
 
 
