@@ -56,7 +56,7 @@ ROOT_URLCONF = 'higher.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['c:/Users/Mateusz/PycharmProjects/Higher1/src/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
