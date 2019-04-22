@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.db.models import Sum
 from django.http import JsonResponse
-from jsonform.jsonform import JsonForm
+
 
 from url_filter.filtersets import ModelFilterSet
 from django.urls import reverse

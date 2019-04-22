@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
+#import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'higher.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['c:/Users/Mateusz/PycharmProjects/Higher1/src/templates/'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,6 +81,19 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+#HEROKU
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd7qvojhckoknqs',
+#         'USER': 'qhuhbhmfqzsvzq',
+#         'PASSWORD': 'dca48208b0e23bf8b917e03274ae44dd199e0927c3d096f001e011d0e8bc5057',
+#         'HOST': 'ec2-54-225-116-36.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
 
 
 # Password validation
@@ -120,3 +133,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# # Activate Django-Heroku.
+# django_heroku.settings(locals())
