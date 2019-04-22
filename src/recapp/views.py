@@ -2,8 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.db.models import Sum
 from django.http import JsonResponse
-from url_filter.filtersets import ModelFilterSet
+from jsonform.jsonform import JsonForm
 
+from url_filter.filtersets import ModelFilterSet
 from django.urls import reverse
 from django.views.generic import (
     CreateView,
@@ -55,10 +56,10 @@ class UserFilterSet(ModelFilterSet):
 class MyDetailView(ListView):
     model = Grade
     template_name = 'recapp/candidate_detail_gradelist.html'
-    #context_object_name = 'object_list'
-    #queryset = Grade.objects.filter(candidate_id = '<int:pk>')
-    #queryset = Grade.objects.filter(candidate_id=1)
-
     def get_queryset(self):
-        # It should filter attendees by event_id posted in URL
         return Grade.objects.filter(candidate_id=self.kwargs['pk'])
+    #context_object_name = 'object_list'
+
+
+
+
