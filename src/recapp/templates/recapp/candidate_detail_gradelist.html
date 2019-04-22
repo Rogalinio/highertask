@@ -3,8 +3,9 @@
 {% block content %}
 
 
-<p>{{ object.value }}</p>
-
+{% for object in object_list %}
+<p>{{ object.task }}:{{ object.value }}</p>
+{% endfor %}
 
 <p><a href="../">back</a></p>
 {% endblock %}

@@ -33,8 +33,11 @@ class Grade(models.Model):
     candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
     recruiter = models.ForeignKey(Recruter, on_delete=models.PROTECT)
 
-    # def __str__(self):
-    #     return self.task
+    class Meta:
+        unique_together = ('task', 'candidate',)
+
+    def __str__(self):
+        return str(self.task) + ': ' + str(self.value) + ', ' + str(self.candidate)
 
 
 
