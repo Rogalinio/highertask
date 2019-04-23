@@ -1,3 +1,8 @@
+App on heroku:
+https://higherweb.herokuapp.com/
+
+
+
 At first, if the task seems too complicated, don’t worry – you’ll find tips at the bottom. The task is to write a web API that will allow grading and listing Tasks given by a Recruiter to the Candidate.
 
     Below is the suggested Django Models structure. Decide by yourself about fields and relation details (on_delete, blank, null, related_name, unique etc.).
